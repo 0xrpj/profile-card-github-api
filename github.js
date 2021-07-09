@@ -24,10 +24,10 @@ fetch("https://api.github.com/users/rsnpj/repos")
     .then((data) => {
         for (var i = 0; i < data.length; i++) {
             if (!data[i].fork) {
-                document.querySelector(".public-repos").innerHTML += data[i].name + '<br/><br/>';
-            } else {
-                document.querySelector(".forked-repos").innerHTML += data[i].name + '<br/><br/>';
+                document.querySelector(".public-repos").innerHTML += "<a href=" + data[i].html_url + "/>" + data[i].name + " <br/><br/>";
 
+            } else {
+                document.querySelector(".forked-repos").innerHTML += "<a href=" + data[i].html_url + "/>" + data[i].name + " <br/><br/>";
             }
 
         }

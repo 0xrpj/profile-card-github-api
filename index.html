@@ -18,45 +18,45 @@
     </div>
 
     <div class="card" hidden>
-        <div class="profile">
-            <div class="top-section">
-                <div class="image"> <img alt="" src="profile.png" id="profile-pic">
+            <div class="detail_box">
+                <div class="top-section">
+                    <div class="image"> <img alt="" src="profile.png" id="profile-pic">
+                    </div>
+                    <div class="profile_details">
+                        <div class="name"></div>
+                        <div class="bio">A CS Undergraduate.</div>
+                    </div>
                 </div>
-                <div class="profile_details">
-                    <div class="name"></div>
-                    <div class="bio">A CS Undergraduate.</div>
+                <div class="follow_details">
+                    Following: &nbsp;<span id="following_count"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Followers: &nbsp;<span id="followers_count"></span>
                 </div>
-            </div>
-            <div class="follow_details">
-                Following: &nbsp;<span id="following_count"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                Followers: &nbsp;<span id="followers_count"></span>
-            </div>
 
-            <div class="tab">
-                <button class="tablinks active" onclick="openTab(event, 'Overview')">Overview</button>
-                <button class="tablinks" onclick="openTab(event, 'Repos')">Repos</button>
-            </div>
-
-            <div id="Overview" class="tabcontent">
-                <span id="email"></span><br /><br />
-                <span id="hirable"></span><br /><br />
-                <span id="public_repo_count"></span><br /><br />
-                <span id="public_gists_count"></span><br /><br />
-                <span id="created_at"></span>
-            </div>
-
-            <div id="Repos" class="tabcontent">
-                <h3>Public repos</h3>
-                <div class="public-repos">
+                <div class="tab">
+                    <button class="tablinks active" onclick="openTab(event, 'Overview')">Overview</button>
+                    <button class="tablinks" onclick="openTab(event, 'Repos')">Repos</button>
                 </div>
-                <h3>Forked repos</h3>
-                <div class="forked-repos">
+
+                <div id="Overview" class="tabcontent">
+                    <span id="email"></span><br /><br />
+                    <span id="hirable"></span><br /><br />
+                    <span id="public_repo_count"></span><br /><br />
+                    <span id="public_gists_count"></span><br /><br />
+                    <span id="created_at"></span>
+                </div>
+
+                <div id="Repos" class="tabcontent">
+                    <h3>Public repos</h3>
+                    <div class="public-repos">
+                    </div>
+                    <h3>Forked repos</h3>
+                    <div class="forked-repos">
+                    </div>
                 </div>
             </div>
 
             <script src="script.js"></script>
             <script src="github.js"></script>
-        </div>
     </div>
 </body>
 
