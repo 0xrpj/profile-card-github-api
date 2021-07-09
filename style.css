@@ -18,6 +18,7 @@ body{
 .card{
     width: 60%;
     height: 90%;
+    max-height:500px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -122,13 +123,14 @@ body{
   }
 
 #Repos{
-    height: 223px;
+    /* height: 223px; */
+    height: 205px;
     overflow-y: scroll;
     /* overflow-x: scroll; */
 }
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
   
   /* Scrollbar customization */
@@ -141,4 +143,33 @@ body{
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
+  }
+
+  @media screen and (max-width:750px){
+    .card{
+        width: 90%;
+    }
+  }
+
+  @media screen and (max-width:450px){
+    .name{
+        font-size: 25px;
+    }
+    .bio{
+        font-size: 15px;
+    }
+  }
+
+  
+  @media screen and (max-width:450px){
+    .name{
+        font-size: 25px;
+    }
+    .bio{
+        display: none;
+    }
+    .top-section{
+        padding: 1px;
+        margin-bottom: 20px;
+    }
   }
