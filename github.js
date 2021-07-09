@@ -13,7 +13,7 @@ fetch("https://api.github.com/users/rsnpj")
         document.querySelector("#created_at").textContent = 'Account created on: ' + data['created_at'].slice(0, 10);
         document.querySelector("#following_count").textContent = data['following']
         document.querySelector("#followers_count").textContent = data['followers']
-
+        console.log(data)
         // Dealing with loading screen
         document.querySelector('.card').hidden = false;
         document.querySelector('.loader').hidden = true;
@@ -24,7 +24,6 @@ fetch("https://api.github.com/users/rsnpj/repos")
     .then((data) => {
         for (var i = 0; i < data.length; i++) {
             if (!data[i].fork) {
-                console.log(data[i].name)
                 document.querySelector(".public-repos").innerHTML += data[i].name + '<br/><br/>';
             } else {
                 document.querySelector(".forked-repos").innerHTML += data[i].name + '<br/><br/>';
