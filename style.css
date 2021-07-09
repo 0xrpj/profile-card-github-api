@@ -7,18 +7,40 @@
     color: #d3d7df;
 }
 
+body{
+    background-image: url("mountain.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
 
 .card{
     width: 60%;
     height: 90%;
-    background-color: #36393f;
     position: absolute;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     border-radius: 10px;
+    overflow: hidden;
 }
+
+/* If Chrome or Opera */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .card{
+        backdrop-filter: blur(100px);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+  }
+
+  /* If mozilla */
+  @-moz-document url-prefix() {
+    .card{
+        background-color: #36393f;
+        transform: translate(-50%, -50%);
+    }
+  }
 
 .top-section{
     display: flex;
@@ -30,7 +52,8 @@
 }
 
 #profile-pic{
-    width: 100px;
+    width: 160px;
+    height: 120px;
     border-radius: 10px;
 }
 

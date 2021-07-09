@@ -3,7 +3,7 @@ fetch("https://api.github.com/users/rsnpj")
     .then((data) => {
         var hireable_status = data['hireable'] == null ? "No" : "Yes"
         var email = data['email'] == null ? "Not provided" : data['email']
-        document.getElementById("profile-pic").src = data['avatar_url']
+        // document.getElementById("profile-pic").src = data['avatar_url']
         document.querySelector(".name").textContent = data['name']
         document.querySelector(".bio").textContent = data['bio']
         document.querySelector("#hirable").textContent = 'Hireable status: ' + hireable_status;
